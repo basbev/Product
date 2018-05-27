@@ -24,7 +24,7 @@
 
   <a class="button is-danger is-outlined" @click="addproduct()">ตกลง</a>
   <a class="button is-info is-outlined" @click="clearproduct()">ยกเลิก</a>
-  <a class="button is-success is-outlined">หน้าสินค้า</a>
+  <router-link to='showproduct'><a class="button is-success is-outlined">หน้าสินค้า</a></router-link>
 </div>
 </div>
 </form>
