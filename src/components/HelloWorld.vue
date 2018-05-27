@@ -4,7 +4,7 @@
     <br>
     <div>
       <div class="columns">
-  <div class="column"><span class="tag is-info is-large"><p class="title is-2 is-spaced">{{msg}}</p></span></div>
+  <div class="column"><span class="button is-danger is-rounded"><p class="title is-2 is-spaced">{{msg}}</p></span></div>
 </div>
   <div class="columns">
   <div class="column"><a>Name Product : <input class="input is-small" type="text" placeholder="ชื่อสินค้า" v-model="nameproduct"></a></div>
