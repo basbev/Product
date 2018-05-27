@@ -1,8 +1,11 @@
 <template>
+  <form id="app">
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <br>
     <div>
+      <div class="columns">
+  <div class="column"><span class="tag is-info is-large"><p class="title is-2 is-spaced">{{msg}}</p></span></div>
+</div>
   <div class="columns">
   <div class="column"><a>Name Product : <input class="input is-small" type="text" placeholder="ชื่อสินค้า" v-model="nameproduct"></a></div>
   </div>
@@ -20,10 +23,11 @@
           </div>
 
   <a class="button is-danger is-outlined" @click="addproduct()">ตกลง</a>
+  <a class="button is-info is-outlined" @click="clearproduct()">ยกเลิก</a>
   <a class="button is-success is-outlined">หน้าสินค้า</a>
 </div>
-
 </div>
+</form>
 </template>
 <script>
 import firebase from 'firebase'
@@ -56,6 +60,12 @@ export default {
         pictureproduct: this.pictureproduct
       }
       productRef.push(tmp)
+      this.nameproduct = ''
+      this.priceproduct = ''
+      this.numberproduct = ''
+      this.pictureproduct = ''
+    },
+    clearproduct () {
       this.nameproduct = ''
       this.priceproduct = ''
       this.numberproduct = ''
